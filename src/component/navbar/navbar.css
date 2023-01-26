@@ -1,0 +1,114 @@
+.navbar{
+    position: sticky;
+    top: 0;
+    height: 70px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.navbarwrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo{
+    flex: 1;
+}
+.avatar{
+    flex: 0.5;
+    margin-left: 20px;
+    display: flex;
+    position: relative;
+}
+
+input{
+    flex: 3;
+    padding: 5px;
+    width: 100%;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+}
+
+.icons{
+    flex: 2;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.statusoption{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: limegreen;
+    position: absolute;
+    left: 27px;
+    top: 0;
+}
+.onlinestatus{
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    display: none;
+}
+
+.onlinestatus.active{
+    display: block;
+}
+
+.status{
+    padding: 0;
+    list-style-type: none;
+    background-color: rgb(65, 60, 60);
+    border-radius: 2px;
+}
+.status li{
+    border-bottom: 1px solid rgb(211, 198, 198);
+    padding: 5px;
+    transition: 0.5s;
+}
+.status button{
+    border: none;
+    background: transparent;
+    color: white;
+    transition: 0.5s;
+}
+
+.status li:hover{
+    background-color: #ccc;
+    
+}
+
+.status button:hover{
+    color: black;
+}
+
+
+
+
+
+@media screen and (max-width: 480px) {
+    .icons{
+        display: none;
+    }
+    .logo{
+        flex: 0.5;
+    }
+    input{
+        flex: 2;
+    }
+    .avatar{
+        flex: 0.5;
+    }
+    .onlinestatus{
+        position: absolute;
+        left: -15px;
+        bottom: 0px;
+        display: none;
+    }
+    
+}
