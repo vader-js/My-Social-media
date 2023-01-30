@@ -1,0 +1,30 @@
+.homewrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0 0 15px;
+}
+.leftcomponent{
+   flex: .6;
+}
+.home{
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    overflow-y: scroll;
+    width: 100%;
+    height: calc(100vh - 70px);
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: #f1f1f1;
+}
+
+.home::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: rgb(187, 184, 184);
+}

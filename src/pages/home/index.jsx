@@ -2,14 +2,18 @@ import React from 'react'
 import Feeds from '../../component/feeds/feeds.jsx'
 import LeftComponent from '../../component/leftcomponent/index.jsx'
 import RightBar from '../../component/rightbar/index.jsx'
-import "./index.css"
+import "./home.css"
 
-function Home() {
+function Home({state,dispatch}) {
   return (
+    <div className="homewrapper">
+      <div className="leftcomponent">
+      <LeftComponent/>
+      </div>
     <div className='home'>
-        <LeftComponent/>
-        <Feeds/>
+        <Feeds state={state} dispatch={dispatch}/>
         <RightBar/>
+    </div>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 .leftlistwrapper{
-    flex: 1.2;
+    /* flex: 1.2; */
     height: calc(100vh - 70px);
     overflow-y: scroll;
+    width: 100%;
 }
 ::-webkit-scrollbar{
     width: 5px;

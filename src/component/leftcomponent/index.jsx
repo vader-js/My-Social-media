@@ -10,6 +10,7 @@ import SchoolIcon from '@mui/icons-material/School';
 import React from 'react';
 import "./index.css"
 import { Avatar } from '@mui/material';
+import {Users} from "../../data/dataframe"
 
 function LeftComponent() {
   return (
@@ -78,43 +79,15 @@ function LeftComponent() {
 
         <div className="friends">
             <ul className="friendlist">
-                <li className="friendlists">
-                <Avatar
-            className="fri"
-            alt="Remy Sharp"
-            src=""  />
-            <span className="friendname">Vader DarkSky</span>
-                </li>
-                <li className="friendlists">
-                <Avatar
-            className="fri"
-            alt="Remy Sharp"
-            src=""  />
-            <span className="friendname">Vader DarkSky</span>
-                </li>
-                <li className="friendlists">
-                <Avatar
-            className="fri"
-            alt="Remy Sharp"
-            src=""  />
-            <span className="friendname">Vader DarkSky</span>
-                </li>
-                <li className="friendlists">
-                <Avatar
-            className="fri"
-            alt="Remy Sharp"
-            src=""  />
-            <span className="friendname">Vader DarkSky</span>
-                </li>
-                <li className="friendlists">
-                <Avatar
-            className="fri"
-            alt="Remy Sharp"
-            src=""  />
-            <span className="friendname">Vader DarkSky</span>
-                </li>
-            
-        
+                {Users.map(user => {
+                 return(   <li className="friendlists" key={user.id}>
+                    <Avatar
+                className="fri"
+                alt="Remy Sharp"
+                src={user.profilePicture}  />
+                <span className="friendname">{user.username}</span>
+                    </li>)
+                })}
             </ul>
         </div>
       

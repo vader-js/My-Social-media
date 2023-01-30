@@ -1,139 +1,152 @@
+import friend1 from "../assets/images/friend1.jpg"
+import friend2 from "../assets/images/friend2.jpg"
+import friend3 from "../assets/images/friend3.jpg"
+import Londonisred from "../assets/images/Londonisred.jpeg"
+import Emirates from "../assets/images/Emirates.jpeg"
+import micasa from "../assets/images/micasa.jpeg"
+import moi from "../assets/images/moi.jpeg"
+import Tomxibro from "../assets/images/Tomxibro.jpeg"
+
+
+
 export const Users = [
     {
       id:1,
-      profilePicture: "assets/person/1.jpeg",
-      username: "Safak Kocaoglu",
+      profilePicture: friend1,
+      username: "Vader Draksky",
     },
     {
       id:2,
-      profilePicture: "assets/person/2.jpeg",
+      profilePicture: friend2,
       username: "Janell Shrum",
     },
     {
       id:3,
-      profilePicture: "assets/person/3.jpeg",
-      username: "Alex Durden",
+      profilePicture: friend3,
+      username: "Smith Durden",
     },
     {
       id:4,
-      profilePicture: "assets/person/4.jpeg",
-      username: "Dora Hawks",
+      profilePicture: friend2,
+      username: "Hawks Goodsky",
     },
     {
       id:5,
-      profilePicture: "assets/person/5.jpeg",
+      profilePicture: friend1,
       username: "Thomas Holden",
     },
     {
       id:6,
-      profilePicture: "assets/person/6.jpeg",
+      profilePicture: friend3,
       username: "Shirley Beauchamp",
     },
     {
       id:7,
-      profilePicture: "assets/person/7.jpeg",
+      profilePicture: friend2,
       username: "Travis Bennett",
     },
     {
       id:8,
-      profilePicture: "assets/person/8.jpeg",
+      profilePicture: friend1,
       username: "Kristen Thomas",
     },
     {
       id:9,
-      profilePicture: "assets/person/9.jpeg",
+      profilePicture: friend3,
       username: "Gary Duty",
     },
     {
       id:10,
-      profilePicture: "assets/person/10.jpeg",
-      username: "Safak Kocaoglu",
+      profilePicture: friend2,
+      username: "Authur Leywin",
     },
   ];
   
-  export const Posts = [
+  export const Posts = {post:[
     {
       id: 1,
       desc: "Love For All, Hatred For None.",
-      photo: "assets/post/1.jpeg",
+      photo: Emirates,
       date: "5 mins ago",
-      userId: 1,
+      username: "Vader Draksky",
       like: 32,
       comment: 9,
     },
     {
       id: 2,
-      photo: "assets/post/2.jpeg",
+      photo: Tomxibro,
       date: "15 mins ago",
-      userId: 2,
+      username: "Janell Shrum",
       like: 2,
       comment: 1,
     },
     {
       id: 3,
       desc: "Every moment is a fresh beginning.",
-      photo: "assets/post/3.jpeg",
+      photo: Londonisred,
       date: "1 hour ago",
-      userId: 3,
+      username: "Smith Durden",
       like: 61,
       comment: 2,
     },
     {
       id: 4,
-      photo: "assets/post/4.jpeg",
+      photo: moi,
       date: "4 hours ago",
-      userId: 4,
+      username: "vader",
       like: 7,
       comment: 3,
     },
     {
       id: 5,
-      photo: "assets/post/5.jpeg",
+      photo: micasa,
       date: "5 hours ago",
-      userId: 5,
+      username: "van gogh",
       like: 23,
       comment: 5,
     },
     {
       id: 6,
-      photo: "assets/post/6.jpeg",
+      photo: friend1,
       date: "1 day ago",
-      userId: 6,
+      username: "Diamond sachs",
       like: 44,
       comment: 6,
     },
     {
       id: 7,
       desc: "Never regret anything that made you smile.",
-      photo: "assets/post/7.jpeg",
+      photo: friend2,
       date: "2 days ago",
-      userId: 7,
+      username: "Gordon stampede",
       like: 52,
       comment: 3,
     },
     {
       id: 8,
-      photo: "assets/post/8.jpeg",
+      photo: friend3,
       date: "3 days ago",
-      userId: 8,
+      username: "Hawks Goodsky",
       like: 15,
       comment: 1,
     },
     {
       id: 9,
       desc: "Change the world by being yourself.",
-      photo: "assets/post/9.jpeg",
+      photo: Emirates,
       date: "5 days ago",
-      userId: 9,
+      username: "Thomas Holden",
       like: 11,
       comment: 2,
     },
     {
       id: 10,
-      photo: "assets/post/10.jpeg",
+      photo: Londonisred,
       date: "1 week ago",
-      userId: 10,
+      username: "Shirley Beauchamp",
       like: 104,
       comment: 12,
-    },
-  ];
+    }
+  ],
+  value: ""};
+  
