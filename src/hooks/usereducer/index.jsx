@@ -10,6 +10,8 @@ export const initialState = Posts;
       return {...state, post: [action.payload, ...state.post]};
     case 'store_value':
       return { ...state, value: action.payload};
+      case "like":
+        return { ...state, post: action.payload};
     default:
       return state;
   }

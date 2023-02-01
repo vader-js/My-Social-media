@@ -1,3 +1,8 @@
 .rightbar{
     flex: 1.8;
 }
+@media screen and (max-width: 480px) {
+    .rightbar{
+        display: none;
+    }
+}

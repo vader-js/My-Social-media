@@ -40,6 +40,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
   
   .shareOptions{
@@ -73,4 +74,23 @@
       margin-right: 20px;
       cursor: pointer;
       color: white;
+  }
+  @media screen and (max-width: 480px) {
+    
+    .shareOptions{
+      flex: 4;
+      display: flex;
+      margin-left: 0;
+      justify-content: space-between;
+    }
+    .shareButton{
+      /* margin-right: 0; */
+      flex: 1;
+    }
+    .shareOption span{
+      display: none;
+    }
+    .shareHr{
+      margin: 20px 0;
+    }
   }

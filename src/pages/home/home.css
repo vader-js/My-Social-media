@@ -28,3 +28,9 @@
     width: 5px;
     background-color: rgb(187, 184, 184);
 }
+@media screen and (max-width: 480px){
+    .leftcomponent{
+       display: none;
+    }
+}
+    

@@ -14,9 +14,20 @@
 .topfeedsWrapper{
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
-.topfeedsWrapper span{
-    margin-left: 10px;
+.name{
+    display: flex;
+    align-items: center;
+}
+.date{
+    font-size: 15px;
+    color: rgb(193, 190, 190);
+    margin-left: 5px;
+}
+.moreicon{
+    margin-right: 10px;
     color: rgb(193, 190, 190);
 }
 .feedsContainer img{
@@ -26,3 +37,26 @@
     object-position: 20% 30%;
     border-radius: 10px;
 }
+.feedsbottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bottomleft{
+    display: flex;
+    align-items: center;
+}
+.bottomleft span:not(:last-child){
+    margin-right:8px;
+    width: 40px;
+    height: 40px;
+   padding-top: 8px;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+    text-align: center;
+}
+/* .bottomleft span:nth-child(1){
+    background-color: rgb(31, 86, 249);
+} */

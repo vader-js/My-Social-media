@@ -62,7 +62,8 @@ export const Users = [
     },
   ];
   
-  export const Posts = {post:[
+  export const Posts = {
+    post:[
     {
       id: 1,
       desc: "Love For All, Hatred For None.",
@@ -71,6 +72,7 @@ export const Users = [
       username: "Vader Draksky",
       like: 32,
       comment: 9,
+      isLike: false,
     },
     {
       id: 2,
@@ -79,6 +81,7 @@ export const Users = [
       username: "Janell Shrum",
       like: 2,
       comment: 1,
+      isLike: false,
     },
     {
       id: 3,
@@ -148,5 +151,6 @@ export const Users = [
       comment: 12,
     }
   ],
-  value: ""};
+  value: "",
+  isLike: false};
   

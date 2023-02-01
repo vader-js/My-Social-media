@@ -13,6 +13,7 @@ function Home({state,dispatch}) {
     <div className='home'>
         <Feeds state={state} dispatch={dispatch}/>
         <RightBar/>
+        
     </div>
     </div>
   )

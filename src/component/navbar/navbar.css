@@ -94,13 +94,14 @@ input{
         display: none;
     }
     .logo{
-        flex: 0.5;
+        flex: 1;
     }
-    input{
-        flex: 2;
+    .navwrapper input{
+        display: none;
     }
     .avatar{
-        flex: 0.5;
+        flex: 1;
+        margin-left:200px;
     }
     .onlinestatus{
         position: absolute;
