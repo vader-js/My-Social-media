@@ -1,6 +1,35 @@
 .rightbar{
     flex: 1.8;
+    width: 100%;
+    padding:0 1%;
 }
+.rightimage{
+    width: 100%;
+    height: 350px;
+}
+.rightimage img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.onlinefriends{
+    padding: 0 2%;
+}
+.avatar{
+    position: relative;
+}
+.status{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    top: 0;
+    background-color: limegreen;
+    border: 1px solid #ccc;
+}
+
 @media screen and (max-width: 480px) {
     .rightbar{
         display: none;

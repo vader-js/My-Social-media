@@ -6,6 +6,7 @@ import Badge from "@mui/material/Badge";
 import { Avatar } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import "./navbar.css";
+import moi from "../../assets/images/moi.jpeg";
 
 export default function Navbar() {
   const toggleButton = () => {
@@ -61,7 +62,7 @@ export default function Navbar() {
             onClick={toggleButton}
             className="navbaravatar"
             alt="Remy Sharp"
-            src=""
+            src={moi}
           />
           <span ref={Status} className="statusoption"></span>
           <div className="onlinestatus">

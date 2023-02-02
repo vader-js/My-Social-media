@@ -2,6 +2,7 @@
     height: 70px;
     margin: 0;
     padding: 0 10px;
+    /* position: relative; */
 }
 
 .navbarwrapper{
@@ -49,7 +50,7 @@ input{
 }
 .onlinestatus{
     position: absolute;
-    left: 40px;
+    left: 0px;
     top: 10px;
     display: none;
 }
@@ -63,11 +64,14 @@ input{
     list-style-type: none;
     background-color: rgb(65, 60, 60);
     border-radius: 2px;
+    /* width: 50px; */
 }
 .status li{
     border-bottom: 1px solid rgb(211, 198, 198);
     padding: 5px;
     transition: 0.5s;
+    background-color: black;
+    width: 60px;
 }
 .status button{
     border: none;
@@ -96,12 +100,12 @@ input{
     .logo{
         flex: 1;
     }
-    .navwrapper input{
+    .navbarwrapper input{
         display: none;
     }
     .avatar{
         flex: 1;
-        margin-left:200px;
+        margin-left:180px;
     }
     .onlinestatus{
         position: absolute;

@@ -7,7 +7,7 @@ import moi from "../../assets/images/moi.jpeg";
 export default function Share({state, dispatch}) {
     const handleShare = (e) => {
         e.preventDefault();
-        dispatch({type: "share", payload: {id: state.post.length + 1, username: "Vader", desc: state.value,date: "5 mins ago"}});
+        dispatch({type: "share", payload: {id: state.post.length + 1, username: "Vader", desc: state.value,like: 0, date: "5 mins ago"}});
         state.value = "";
     }
   return (

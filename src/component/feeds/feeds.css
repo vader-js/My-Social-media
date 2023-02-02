@@ -60,3 +60,10 @@
 /* .bottomleft span:nth-child(1){
     background-color: rgb(31, 86, 249);
 } */
+.loading{
+    filter: blur(5px);
+    /* opacity: 0.5; */
+}
+.loaded{
+    filter: blur(0);
+}
