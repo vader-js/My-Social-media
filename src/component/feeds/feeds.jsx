@@ -6,37 +6,57 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
-
-
-
-
 function Feeds({state, dispatch}) {
   
  const [loaded, setLoaded] = useState(false);
+ const [src, setsrc] = useState("");
 
  function loadimage(image){
   image.src = image.getAttribute("data-src");
 }
+
+
+const HandleImage = (e) => {
+  const file = e.target.files[0];
+    let fileType = file.type; //getting selected file type
+    let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+    if(validExtensions.includes(fileType)){ //if user selected file is an image file
+      let fileReader = new FileReader(); //creating new FileReader object
+     
+      fileReader.onload = ()=>{
+        let fileURL = fileReader.result; 
+        setsrc(fileURL);
+      }
+      fileReader.readAsDataURL(file);
+    }else{
+      alert("Please select an image file (jpg or png).");
+    }  
+}
+
   useEffect(() => {
     let images = document.querySelectorAll('[data-src]');
     let observer = new IntersectionObserver((entries,observer) => {
         entries.forEach(entry => {
           if(entry.isIntersecting){
           loadimage(entry.target)
-          observer.unobserve(entry.target)
+         
           }
         });
     },
     {
     rootMargin: "0px 0px 0px 0px",
-    threshold: 1
+    threshold: 0
   });
      images.forEach(image => {
        observer.observe(image)
      })
-  },[]);
-
- 
+     console.log("render")
+     return () => {
+      images.forEach(image => {
+        observer.observe(image)
+      })
+     };
+  },[HandleImage]);
 
   const postLike = (id) => {
     if(!id.isLike){
@@ -51,7 +71,7 @@ function Feeds({state, dispatch}) {
   return (
     <div className='feeds'>
       <div className="topmenu">
-        <Share dispatch={dispatch} state={state}/>
+        <Share src={src} dispatch={dispatch} state={state} HandleImage={HandleImage} />
       </div>
       {state.post.map(post =>{
         return(
@@ -64,7 +84,7 @@ function Feeds({state, dispatch}) {
               <span className='moreicon'><MoreVertIcon/></span>
             </div>
             <p>{post.desc}</p>
-            <img src={''} data-src={post.photo} alt="post" onLoad={()=> setLoaded(true)} className={loaded? "loaded": "loading"}/>
+            <img src='' data-src={post.photo} alt="post" onLoad={()=> setLoaded(true)} className={loaded? "loaded": "loading"}/>
             <div className="feedsbottom">
               <div className="bottomleft">
                <span onClick={()=> postLike(post)} className='thumbsup'
