@@ -38,7 +38,6 @@ const HandleImage = (e) => {
         entries.forEach(entry => {
           if(entry.isIntersecting){
           loadimage(entry.target)
-         
           }
         });
     },
@@ -54,7 +53,7 @@ const HandleImage = (e) => {
         observer.observe(image)
       })
      };
-  },[HandleImage]);
+  },[state.src]);
 
   const postLike = (id) => {
     if(!id.isLike){
