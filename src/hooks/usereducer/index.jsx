@@ -12,6 +12,8 @@ export const initialState = Posts;
       return { ...state, value: action.payload};
       case "like":
         return { ...state, post: action.payload};
+    case  "store_image":
+    return { ...state, src: action.payload};
     default:
       return state;
   }

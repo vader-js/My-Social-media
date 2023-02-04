@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState} from 'react'
 import Share from '../mymenu'
 import "./feeds.css"
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -9,7 +9,6 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 function Feeds({state, dispatch}) {
   
  const [loaded, setLoaded] = useState(false);
- const [src, setsrc] = useState("");
 
  function loadimage(image){
   image.src = image.getAttribute("data-src");
@@ -25,7 +24,7 @@ const HandleImage = (e) => {
      
       fileReader.onload = ()=>{
         let fileURL = fileReader.result; 
-        setsrc(fileURL);
+        dispatch({type:"store_image", payload: fileURL});
       }
       fileReader.readAsDataURL(file);
     }else{
@@ -50,7 +49,6 @@ const HandleImage = (e) => {
      images.forEach(image => {
        observer.observe(image)
      })
-     console.log("render")
      return () => {
       images.forEach(image => {
         observer.observe(image)
@@ -71,7 +69,7 @@ const HandleImage = (e) => {
   return (
     <div className='feeds'>
       <div className="topmenu">
-        <Share src={src} dispatch={dispatch} state={state} HandleImage={HandleImage} />
+        <Share dispatch={dispatch} state={state} HandleImage={HandleImage} />
       </div>
       {state.post.map(post =>{
         return(

@@ -64,6 +64,13 @@
       font-size: 14px;
       font-weight: 500;
   }
+  .thumbnail img{
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin: 5px;
+  }
   
   .shareButton{
       border: none;
